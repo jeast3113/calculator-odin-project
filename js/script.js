@@ -18,3 +18,14 @@ const divide = (a, b) => {
 
 //----------------//
 
+function operate(symbol, a, b) {
+  if (symbol == "+") {
+    return add(a, b);
+  } else if (symbol == "-") {
+    return subtract(a, b);
+  } else if (symbol == "*") {
+    return multiply(a, b);
+  } else if (symbol == "/") {
+    return divide(a, b);
+  }
+}
