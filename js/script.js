@@ -1,3 +1,12 @@
+// -- Create DOM variables
+const body = document.querySelector("body");
+console.log(body);
+
+//
+const calculatorContainer = document.createElement("div");
+calculatorContainer.classList.add("calc-container");
+body.appendChild(calculatorContainer);
+
 // -- create functions for math operations
 
 const add = (a, b) => {
@@ -29,3 +38,5 @@ function operate(symbol, a, b) {
     return divide(a, b);
   }
 }
+
+//---------------------//
