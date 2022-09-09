@@ -12,6 +12,20 @@ const displayNumContainer = document.createElement("div");
 displayNumContainer.classList.add("display-num-container");
 calculatorContainer.appendChild(displayNumContainer);
 
+//
+const clearBtnContainer = document.createElement("div");
+clearBtnContainer.classList.add("clear-button-container");
+calculatorContainer.appendChild(clearBtnContainer);
+
+//--------------------------//
+
+// -- create buttons
+
+const clearBtn = document.createElement("button");
+clearBtn.classList.add("clear-button");
+clearBtn.innerHTML = "C";
+clearBtnContainer.appendChild(clearBtn);
+
 // -- create functions for math operations
 
 const add = (a, b) => {

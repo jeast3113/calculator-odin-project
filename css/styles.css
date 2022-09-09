@@ -23,3 +23,33 @@
   border: 1px solid black;
   border-radius: 10px;
 }
+
+.clear-button-container {
+  position: absolute;
+  left: 3%;
+  top: 25%;
+}
+
+.clear-button {
+  width: 225px;
+  height: 50px;
+  font-size: 24px;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 25%;
+  background-color: white;
+}
+
+.clear-button:hover {
+  background-color: red;
+  color: white;
+  transition: 1.0s;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button {
+  transition: 1.0s;
+}
