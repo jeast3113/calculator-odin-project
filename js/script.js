@@ -7,6 +7,11 @@ const calculatorContainer = document.createElement("div");
 calculatorContainer.classList.add("calc-container");
 body.appendChild(calculatorContainer);
 
+//
+const displayNumContainer = document.createElement("div");
+displayNumContainer.classList.add("display-num-container");
+calculatorContainer.appendChild(displayNumContainer);
+
 // -- create functions for math operations
 
 const add = (a, b) => {

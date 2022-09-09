@@ -13,3 +13,13 @@
   border: 2px solid black;
   border-radius: 20px;
 }
+
+.display-num-container {
+  position: absolute;
+  left: 3%;
+  top: 3%;
+  width: 325px;
+  height: 75px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
