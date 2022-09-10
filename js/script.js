@@ -10,6 +10,7 @@ body.appendChild(calculatorContainer);
 //
 const displayNumContainer = document.createElement("div");
 displayNumContainer.classList.add("display-num-container");
+displayNumContainer.innerHTML = 120.35;
 calculatorContainer.appendChild(displayNumContainer);
 
 //
