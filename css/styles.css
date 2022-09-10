@@ -43,7 +43,7 @@
 .clear-button:hover {
   background-color: red;
   color: white;
-  transition: 1.0s;
+  transition: 1s;
 }
 
 button:active {
@@ -51,5 +51,5 @@ button:active {
 }
 
 button {
-  transition: 1.0s;
+  transition: 1s;
 }
