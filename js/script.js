@@ -21,6 +21,10 @@ const operandBtnContainer = document.createElement("div");
 operandBtnContainer.classList.add("operand-button-container");
 calculatorContainer.appendChild(operandBtnContainer);
 
+const numBtnContainer = document.createElement("div");
+numBtnContainer.classList.add("number-button-container");
+calculatorContainer.appendChild(numBtnContainer);
+
 //--------------------------//
 
 // -- create buttons
@@ -30,7 +34,7 @@ clearBtn.classList.add("clear-button");
 clearBtn.innerHTML = "C";
 clearBtnContainer.appendChild(clearBtn);
 
-//
+//-----------------------------//
 for (let i = 1; i <= 5; i++) {
   const operandBtn = document.createElement("button");
   operandBtn.setAttribute("id", `operand-button-${i}`);
@@ -48,6 +52,16 @@ const addBtn = document.getElementById("operand-button-4");
 addBtn.innerHTML = "&#43";
 const equalsBtn = document.getElementById("operand-button-5");
 equalsBtn.innerHTML = "&#61";
+//----------------------------//
+
+//----------------------------//
+for (let i = 1; i <= 9 ; i++) {
+  const numBtn = document.createElement("button");
+  numBtn.setAttribute("id", `number-button-${i}`);
+  numBtn.classList.add("number-button");
+  numBtn.innerHTML = i;
+  numBtnContainer.appendChild(numBtn);
+}
 
 // -- create functions for math operations
 
