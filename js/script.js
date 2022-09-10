@@ -17,14 +17,37 @@ const clearBtnContainer = document.createElement("div");
 clearBtnContainer.classList.add("clear-button-container");
 calculatorContainer.appendChild(clearBtnContainer);
 
+const operandBtnContainer = document.createElement("div");
+operandBtnContainer.classList.add("operand-button-container");
+calculatorContainer.appendChild(operandBtnContainer);
+
 //--------------------------//
 
 // -- create buttons
-
+//
 const clearBtn = document.createElement("button");
 clearBtn.classList.add("clear-button");
 clearBtn.innerHTML = "C";
 clearBtnContainer.appendChild(clearBtn);
+
+//
+for (let i = 1; i <= 5; i++) {
+  const operandBtn = document.createElement("button");
+  operandBtn.setAttribute("id", `operand-button-${i}`);
+  operandBtn.classList.add("operand-button");
+  operandBtnContainer.appendChild(operandBtn);
+}
+
+const divideBtn = document.getElementById("operand-button-1");
+divideBtn.innerHTML = "&#247";
+const multiplyBtn = document.getElementById("operand-button-2");
+multiplyBtn.innerHTML = "&#215";
+const subtractBtn = document.getElementById("operand-button-3");
+subtractBtn.innerHTML = "&#8722";
+const addBtn = document.getElementById("operand-button-4");
+addBtn.innerHTML = "&#43";
+const equalsBtn = document.getElementById("operand-button-5");
+equalsBtn.innerHTML = "&#61";
 
 // -- create functions for math operations
 
