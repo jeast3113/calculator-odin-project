@@ -1,10 +1,4 @@
 
-// -- Create Global Variables
-let symbol = "";
-let a = "";
-let b = "";
-
-
 // -- Create DOM variables
 const body = document.querySelector("body");
 console.log(body);
@@ -17,7 +11,6 @@ body.appendChild(calculatorContainer);
 //
 const displayNumContainer = document.createElement("div");
 displayNumContainer.classList.add("display-num-container");
-displayNumContainer.innerHTML = 0;
 calculatorContainer.appendChild(displayNumContainer);
 
 //
@@ -83,19 +76,19 @@ calculatorContainer.append(zeroBtn);
 // -- create functions for math operations
 
 const add = (a, b) => {
-  return document.querySelector(".display-num-container").innerHTML = (parseInt(a) + parseInt(b));
+  return a + b;
 };
 
 const subtract = (a, b) => {
-  return document.querySelector(".display-num-container").innerHTML = (parseInt(a) - parseInt(b));
+  return a - b;
 };
 
 const multiply = (a, b) => {
-  return document.querySelector(".display-num-container").innerHTML = (parseInt(a) * parseInt(b));
+  return a * b;
 };
 
 const divide = (a, b) => {
-  return document.querySelector(".display-num-container").innerHTML = (parseInt(a) / parseInt(b));
+  return a / b;
 };
 
 //----------------//
