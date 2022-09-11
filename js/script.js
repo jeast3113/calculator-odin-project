@@ -130,8 +130,9 @@ symbols.forEach(sym => {
   sym.addEventListener("click", (e) => {
     if (sym !== "=") {
       symbol = e.target.innerHTML;
-    } else if (sym === "=") {
-      operate(symbol, a, b);
+      console.log(symbol);
+    } else {
+      console.log(symbol);
     }
   });
 });
