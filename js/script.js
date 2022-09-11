@@ -56,7 +56,7 @@ equalsBtn.innerHTML = "&#61";
 //----------------------------//
 
 //----------------------------//
-for (let i = 1; i <= 9 ; i++) {
+for (let i = 1; i <= 9; i++) {
   const numBtn = document.createElement("button");
   numBtn.setAttribute("id", `number-button-${i}`);
   numBtn.classList.add("number-button");
