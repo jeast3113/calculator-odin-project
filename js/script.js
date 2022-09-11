@@ -1,3 +1,7 @@
+let symbol = undefined;
+let a = 0;
+let b = 0;
+
 // -- Create DOM variables
 const body = document.querySelector("body");
 console.log(body);
@@ -10,6 +14,7 @@ body.appendChild(calculatorContainer);
 //
 const displayNumContainer = document.createElement("div");
 displayNumContainer.classList.add("display-num-container");
+displayNumContainer.innerHTML = 0;
 calculatorContainer.appendChild(displayNumContainer);
 
 //
@@ -115,3 +120,16 @@ function operate(symbol, a, b) {
 
 // -- event listeners
 
+
+
+let nums = document.querySelectorAll(".number-button");
+nums.forEach(num => {
+  num.addEventListener("click", (e) => {
+    if (symbol == undefined) {
+      a += e.target.value;
+      document.querySelector(".display-num-container").innerHTML = parseInt(a);
+    }
+  });
+});
+
+console.log(typeof a);
