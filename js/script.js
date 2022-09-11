@@ -60,7 +60,7 @@ addBtn.setAttribute("value", "+");
 const equalsBtn = document.createElement("button");
 equalsBtn.setAttribute("id", "equal-button");
 equalsBtn.innerHTML = "&#61";
-operandBtnContainer.appendChild(equalsBtn);
+operatorBtnContainer.appendChild(equalsBtn);
 
 //----------------------------//
 for (let i = 1; i <= 9; i++) {
@@ -114,5 +114,4 @@ function operate(symbol, a, b) {
 //---------------------//
 
 // -- event listeners
-
 
