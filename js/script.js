@@ -43,7 +43,7 @@ clearBtn.innerHTML = "C";
 clearBtnContainer.appendChild(clearBtn);
 
 //-----------------------------//
-for (let i = 1; i <= 5; i++) {
+for (let i = 1; i <= 4; i++) {
   const operandBtn = document.createElement("button");
   operandBtn.setAttribute("id", `operand-button-${i}`);
   operandBtn.classList.add("operand-button");
@@ -58,9 +58,9 @@ const subtractBtn = document.getElementById("operand-button-3");
 subtractBtn.innerHTML = "&#8722";
 const addBtn = document.getElementById("operand-button-4");
 addBtn.innerHTML = "&#43";
-const equalsBtn = document.getElementById("operand-button-5");
-equalsBtn.innerHTML = "&#61";
 //----------------------------//
+
+// const equalsBtn = document.createElement("button");
 
 //----------------------------//
 for (let i = 1; i <= 9; i++) {
@@ -128,12 +128,8 @@ numbers.forEach(number => {
 let symbols = document.querySelectorAll('.operand-button');
 symbols.forEach(sym => {
   sym.addEventListener("click", (e) => {
-    if (sym !== "=") {
-      symbol = e.target.innerHTML;
-      console.log(symbol);
-    } else {
-      console.log(symbol);
-    }
+    symbol = e.target.innerHTML;
+    console.log(symbol, a, b);
   });
 });
 
