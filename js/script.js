@@ -10,7 +10,7 @@ body.appendChild(calculatorContainer);
 //
 const displayNumContainer = document.createElement("div");
 displayNumContainer.classList.add("display-num-container");
-displayNumContainer.innerHTML = 120.35;
+displayNumContainer.innerHTML = 0;
 calculatorContainer.appendChild(displayNumContainer);
 
 //
@@ -63,6 +63,12 @@ for (let i = 1; i <= 9 ; i++) {
   numBtn.innerHTML = i;
   numBtnContainer.appendChild(numBtn);
 }
+
+const zeroBtn = document.createElement("button");
+zeroBtn.setAttribute("id", `number-button-0`);
+zeroBtn.classList.add("number-button");
+zeroBtn.innerHTML = "0";
+calculatorContainer.append(zeroBtn);
 
 // -- create functions for math operations
 

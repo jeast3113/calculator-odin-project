@@ -106,6 +106,12 @@
   margin-right: 15px;
 }
 
+#number-button-0 {
+  position: absolute;
+  left: 3%;
+  top: 83%;
+}
+
 .number-button:hover {
   background-color: black;
   color: white;
