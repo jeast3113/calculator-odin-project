@@ -80,19 +80,19 @@ calculatorContainer.append(zeroBtn);
 // -- create functions for math operations
 
 const add = (a, b) => {
-  return document.querySelector(".display-num-container").innerHTML = (a + b);
+  return document.querySelector(".display-num-container").innerHTML = (parseInt(a) + parseInt(b));
 };
 
 const subtract = (a, b) => {
-  return document.querySelector(".display-num-container").innerHTML = (a - b);
+  return document.querySelector(".display-num-container").innerHTML = (parseInt(a) - parseInt(b));
 };
 
 const multiply = (a, b) => {
-  return document.querySelector(".display-num-container").innerHTML = (a * b);
+  return document.querySelector(".display-num-container").innerHTML = (parseInt(a) * parseInt(b));
 };
 
 const divide = (a, b) => {
-  return document.querySelector(".display-num-container").innerHTML = (a / b);
+  return document.querySelector(".display-num-container").innerHTML = (parseInt(a) / parseInt(b));
 };
 
 //----------------//
@@ -128,8 +128,9 @@ numbers.forEach(number => {
 let symbols = document.querySelectorAll('.operand-button');
 symbols.forEach(sym => {
   sym.addEventListener("click", (e) => {
-    symbol = e.target.innerHTML;
-    console.log(symbol, a, b);
+    if (symbol !== "=") {
+      symbol = e.target.innerHTML;
+    } 
   });
 });
 
