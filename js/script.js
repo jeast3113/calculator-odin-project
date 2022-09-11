@@ -118,7 +118,7 @@ function operate(symbol, a, b) {
 let numbers = document.querySelectorAll(".number-button");
 numbers.forEach(number => {
   number.addEventListener("click", (e) => {
-    if (symbol === "") {
+    if (symbol == "") {
       a += e.target.innerHTML;
       document.querySelector(".display-num-container").innerHTML = a;
     } else {
@@ -133,6 +133,7 @@ symbols.forEach(sym => {
   sym.addEventListener("click", (e) => {
     if (symbol !== "=") {
       symbol = e.target.innerHTML;
+      console.log(symbol);
     } 
   });
 });
