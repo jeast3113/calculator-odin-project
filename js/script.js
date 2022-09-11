@@ -115,28 +115,7 @@ function operate(symbol, a, b) {
 //---------------------//
 
 // -- event listeners
-let numbers = document.querySelectorAll(".number-button");
-numbers.forEach(number => {
-  number.addEventListener("click", (e) => {
-    if (symbol == "") {
-      a += e.target.innerHTML;
-      document.querySelector(".display-num-container").innerHTML = a;
-    } else {
-      b += e.target.innerHTML;
-      document.querySelector(".display-num-container").innerHTML = b;
-    }
-  });
-});
 
-let symbols = document.querySelectorAll('.operand-button');
-symbols.forEach(sym => {
-  sym.addEventListener("click", (e) => {
-    if (symbol !== "=") {
-      symbol = e.target.innerHTML;
-      console.log(symbol);
-    } 
-  });
-});
 
 
 

@@ -20,6 +20,7 @@
   left: 3%;
   top: 3%;
   width: 325px;
+  max-width: 325px;
   height: 75px;
   border: 1px solid black;
   border-radius: 10px;
