@@ -73,7 +73,7 @@
   color: white;
 }
 
-.operand-button {
+.operand-button, #equal-button {
   width: 75px;
   height: 50px;
   font-size: 24px;
@@ -89,7 +89,7 @@
   color: white;
 }
 
-.operand-button:last-of-type:hover {
+#equal-button:hover {
   background-color: rgb(5, 245, 5);
   color: white;
 }
