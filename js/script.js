@@ -1,3 +1,10 @@
+
+// -- Create Global Variables
+let symbol = "";
+let a = "";
+let b = "";
+
+
 // -- Create DOM variables
 const body = document.querySelector("body");
 console.log(body);
@@ -73,19 +80,19 @@ calculatorContainer.append(zeroBtn);
 // -- create functions for math operations
 
 const add = (a, b) => {
-  return a + b;
+  return document.querySelector(".display-num-container").innerHTML = (a + b);
 };
 
 const subtract = (a, b) => {
-  return a - b;
+  return document.querySelector(".display-num-container").innerHTML = (a - b);
 };
 
 const multiply = (a, b) => {
-  return a * b;
+  return document.querySelector(".display-num-container").innerHTML = (a * b);
 };
 
 const divide = (a, b) => {
-  return a / b;
+  return document.querySelector(".display-num-container").innerHTML = (a / b);
 };
 
 //----------------//
@@ -103,3 +110,34 @@ function operate(symbol, a, b) {
 }
 
 //---------------------//
+
+// -- event listeners
+let numbers = document.querySelectorAll(".number-button");
+numbers.forEach(number => {
+  number.addEventListener("click", (e) => {
+    if (symbol === "") {
+      a += e.target.innerHTML;
+      document.querySelector(".display-num-container").innerHTML = a;
+    } else {
+      b += e.target.innerHTML;
+      document.querySelector(".display-num-container").innerHTML = b;
+    }
+  });
+});
+
+let symbols = document.querySelectorAll('.operand-button');
+symbols.forEach(sym => {
+  sym.addEventListener("click", (e) => {
+    if (sym !== "=") {
+      symbol = e.target.innerHTML;
+    } else if (sym === "=") {
+      operate(symbol, a, b);
+    }
+  });
+});
+
+
+
+
+
+
