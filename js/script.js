@@ -1,4 +1,3 @@
-
 // -- Create DOM variables
 const body = document.querySelector("body");
 console.log(body);
@@ -33,6 +32,7 @@ calculatorContainer.appendChild(numBtnContainer);
 const clearBtn = document.createElement("button");
 clearBtn.classList.add("clear-button");
 clearBtn.innerHTML = "C";
+clearBtn.setAttribute("value", "clear");
 clearBtnContainer.appendChild(clearBtn);
 
 //-----------------------------//
@@ -45,12 +45,16 @@ for (let i = 1; i <= 4; i++) {
 
 const divideBtn = document.getElementById("operand-button-1");
 divideBtn.innerHTML = "&#247";
+divideBtn.setAttribute("value", "/");
 const multiplyBtn = document.getElementById("operand-button-2");
 multiplyBtn.innerHTML = "&#215";
+multiplyBtn.setAttribute("value", "*");
 const subtractBtn = document.getElementById("operand-button-3");
 subtractBtn.innerHTML = "&#8722";
+subtractBtn.setAttribute("value", "-");
 const addBtn = document.getElementById("operand-button-4");
 addBtn.innerHTML = "&#43";
+addBtn.setAttribute("value", "+");
 //----------------------------//
 
 const equalsBtn = document.createElement("button");
@@ -63,6 +67,7 @@ for (let i = 1; i <= 9; i++) {
   const numBtn = document.createElement("button");
   numBtn.setAttribute("id", `number-button-${i}`);
   numBtn.classList.add("number-button");
+  numBtn.setAttribute("value", i);
   numBtn.innerHTML = i;
   numBtnContainer.appendChild(numBtn);
 }
@@ -108,10 +113,3 @@ function operate(symbol, a, b) {
 //---------------------//
 
 // -- event listeners
-
-
-
-
-
-
-
