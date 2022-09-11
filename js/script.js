@@ -60,7 +60,10 @@ const addBtn = document.getElementById("operand-button-4");
 addBtn.innerHTML = "&#43";
 //----------------------------//
 
-// const equalsBtn = document.createElement("button");
+const equalsBtn = document.createElement("button");
+equalsBtn.setAttribute("id", "equal-button");
+equalsBtn.innerHTML = "&#61";
+operandBtnContainer.appendChild(equalsBtn);
 
 //----------------------------//
 for (let i = 1; i <= 9; i++) {
