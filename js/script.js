@@ -17,9 +17,9 @@ const clearBtnContainer = document.createElement("div");
 clearBtnContainer.classList.add("clear-button-container");
 calculatorContainer.appendChild(clearBtnContainer);
 
-const operandBtnContainer = document.createElement("div");
-operandBtnContainer.classList.add("operand-button-container");
-calculatorContainer.appendChild(operandBtnContainer);
+const operatorBtnContainer = document.createElement("div");
+operatorBtnContainer.classList.add("operator-button-container");
+calculatorContainer.appendChild(operatorBtnContainer);
 
 const numBtnContainer = document.createElement("div");
 numBtnContainer.classList.add("number-button-container");
@@ -37,22 +37,22 @@ clearBtnContainer.appendChild(clearBtn);
 
 //-----------------------------//
 for (let i = 1; i <= 4; i++) {
-  const operandBtn = document.createElement("button");
-  operandBtn.setAttribute("id", `operand-button-${i}`);
-  operandBtn.classList.add("operand-button");
-  operandBtnContainer.appendChild(operandBtn);
+  const operatorBtn = document.createElement("button");
+  operatorBtn.setAttribute("id", `operator-button-${i}`);
+  operatorBtn.classList.add("operator-button");
+  operatorBtnContainer.appendChild(operatorBtn);
 }
 
-const divideBtn = document.getElementById("operand-button-1");
+const divideBtn = document.getElementById("operator-button-1");
 divideBtn.innerHTML = "&#247";
 divideBtn.setAttribute("value", "/");
-const multiplyBtn = document.getElementById("operand-button-2");
+const multiplyBtn = document.getElementById("operator-button-2");
 multiplyBtn.innerHTML = "&#215";
 multiplyBtn.setAttribute("value", "*");
-const subtractBtn = document.getElementById("operand-button-3");
+const subtractBtn = document.getElementById("operator-button-3");
 subtractBtn.innerHTML = "&#8722";
 subtractBtn.setAttribute("value", "-");
-const addBtn = document.getElementById("operand-button-4");
+const addBtn = document.getElementById("operator-button-4");
 addBtn.innerHTML = "&#43";
 addBtn.setAttribute("value", "+");
 //----------------------------//
@@ -75,6 +75,7 @@ for (let i = 1; i <= 9; i++) {
 const zeroBtn = document.createElement("button");
 zeroBtn.setAttribute("id", `number-button-0`);
 zeroBtn.classList.add("number-button");
+zeroBtn.setAttribute("value", 0);
 zeroBtn.innerHTML = "0";
 calculatorContainer.append(zeroBtn);
 
@@ -113,3 +114,5 @@ function operate(symbol, a, b) {
 //---------------------//
 
 // -- event listeners
+
+
