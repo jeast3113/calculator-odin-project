@@ -120,7 +120,12 @@ function operate(symbol, a, b) {
 
 // -- event listeners
 
-
+clearBtn.addEventListener("click", () => {
+  symbol = undefined;
+  a = 0;
+  b = 0;
+  displayNumContainer.innerHTML = 0;
+})
 
 let nums = document.querySelectorAll(".number-button");
 nums.forEach(num => {
