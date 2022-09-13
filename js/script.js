@@ -13,7 +13,7 @@ body.appendChild(calculatorContainer);
 //
 const displayNumContainer = document.createElement("div");
 displayNumContainer.classList.add("display-num-container");
-displayNumContainer.innerHTML = 0;
+displayNumContainer.innerHTML = "HELLO";
 calculatorContainer.appendChild(displayNumContainer);
 
 //
@@ -144,6 +144,11 @@ operators.forEach(operator => {
   operator.addEventListener("click", (e) => {
     if(a != "" && symbol == undefined) {
       symbol = e.target.value;
+    } else if (symbol) {
+      document.querySelector(".display-num-container").innerHTML = "ERROR";
+      a = "";
+      b = "";
+      symbol = undefined;
     }
   });
 });
@@ -155,11 +160,11 @@ equalsBtn.addEventListener("click", () => {
     b = "";
     symbol = undefined;
   } else {
-    document.querySelector(".display-num-container").innerHTML = "ERROR";
-    a = "";
-    b = "";
-    symbol = undefined;
-  }
+      document.querySelector(".display-num-container").innerHTML = "ERROR";
+      a = "";
+      b = "";
+      symbol = undefined;
+    }
 });
 
 
