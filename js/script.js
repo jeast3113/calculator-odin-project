@@ -1,6 +1,6 @@
 let symbol = undefined;
-let a = 0;
-let b = 0;
+let a = "";
+let b = "";
 
 // -- Create DOM variables
 const body = document.querySelector("body");
@@ -86,19 +86,19 @@ calculatorContainer.append(zeroBtn);
 // -- create functions for math operations
 
 const add = (a, b) => {
-  return a + b;
+  return (parseInt(a) + parseInt(b));
 };
 
 const subtract = (a, b) => {
-  return a - b;
+  return (parseInt(a) - parseInt(b));
 };
 
 const multiply = (a, b) => {
-  return a * b;
+  return (parseInt(a) * parseInt(b));
 };
 
 const divide = (a, b) => {
-  return a / b;
+  return (parseInt(a) / parseInt(b));
 };
 
 //----------------//
@@ -142,7 +142,7 @@ nums.forEach(num => {
 let operators = document.querySelectorAll(".operator-button");
 operators.forEach(operator => {
   operator.addEventListener("click", (e) => {
-    if(a != 0 && symbol == undefined) {
+    if(a != "" && symbol == undefined) {
       symbol = e.target.value;
     }
   });
@@ -152,7 +152,12 @@ equalsBtn.addEventListener("click", () => {
   if(symbol && a && b) {
     document.querySelector(".display-num-container").innerHTML = operate(symbol, a, b);
     a = document.querySelector(".display-num-container").innerHTML;
-    b = 0;
+    b = "";
+    symbol = undefined;
+  } else {
+    document.querySelector(".display-num-container").innerHTML = "ERROR";
+    a = "";
+    b = "";
     symbol = undefined;
   }
 });
