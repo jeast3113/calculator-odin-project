@@ -21,10 +21,12 @@ const clearBtnContainer = document.createElement("div");
 clearBtnContainer.classList.add("clear-button-container");
 calculatorContainer.appendChild(clearBtnContainer);
 
+//
 const operatorBtnContainer = document.createElement("div");
 operatorBtnContainer.classList.add("operator-button-container");
 calculatorContainer.appendChild(operatorBtnContainer);
 
+//
 const numBtnContainer = document.createElement("div");
 numBtnContainer.classList.add("number-button-container");
 calculatorContainer.appendChild(numBtnContainer);
@@ -86,19 +88,19 @@ calculatorContainer.append(zeroBtn);
 // -- create functions for math operations
 
 const add = (a, b) => {
-  return (parseInt(a) + parseInt(b));
+  return parseInt(a) + parseInt(b);
 };
 
 const subtract = (a, b) => {
-  return (parseInt(a) - parseInt(b));
+  return parseInt(a) - parseInt(b);
 };
 
 const multiply = (a, b) => {
-  return (parseInt(a) * parseInt(b));
+  return parseInt(a) * parseInt(b);
 };
 
 const divide = (a, b) => {
-  return (parseInt(a) / parseInt(b));
+  return parseInt(a) / parseInt(b);
 };
 
 //----------------//
@@ -124,10 +126,11 @@ clearBtn.addEventListener("click", () => {
   a = 0;
   b = 0;
   displayNumContainer.innerHTML = 0;
-})
+});
 
+//
 let nums = document.querySelectorAll(".number-button");
-nums.forEach(num => {
+nums.forEach((num) => {
   num.addEventListener("click", (e) => {
     if (symbol == undefined) {
       a += e.target.value;
@@ -139,10 +142,11 @@ nums.forEach(num => {
   });
 });
 
+//
 let operators = document.querySelectorAll(".operator-button");
-operators.forEach(operator => {
+operators.forEach((operator) => {
   operator.addEventListener("click", (e) => {
-    if(a != "" && symbol == undefined) {
+    if (a != "" && symbol == undefined) {
       symbol = e.target.value;
     } else if (symbol) {
       document.querySelector(".display-num-container").innerHTML = "ERROR";
@@ -153,19 +157,21 @@ operators.forEach(operator => {
   });
 });
 
+//
 equalsBtn.addEventListener("click", () => {
-  if(symbol && a && b) {
-    document.querySelector(".display-num-container").innerHTML = operate(symbol, a, b);
+  if (symbol && a && b) {
+    document.querySelector(".display-num-container").innerHTML = operate(
+      symbol,
+      a,
+      b
+    );
     a = document.querySelector(".display-num-container").innerHTML;
     b = "";
     symbol = undefined;
   } else {
-      document.querySelector(".display-num-container").innerHTML = "ERROR";
-      a = "";
-      b = "";
-      symbol = undefined;
-    }
+    document.querySelector(".display-num-container").innerHTML = "ERROR";
+    a = "";
+    b = "";
+    symbol = undefined;
+  }
 });
-
-
-
