@@ -148,5 +148,14 @@ operators.forEach(operator => {
   });
 });
 
+equalsBtn.addEventListener("click", () => {
+  if(symbol && a && b) {
+    document.querySelector(".display-num-container").innerHTML = operate(symbol, a, b);
+    a = document.querySelector(".display-num-container").innerHTML;
+    b = 0;
+    symbol = undefined;
+  }
+});
+
 
 
