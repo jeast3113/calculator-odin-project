@@ -4,7 +4,6 @@ let b = 0;
 
 // -- Create DOM variables
 const body = document.querySelector("body");
-console.log(body);
 
 //
 const calculatorContainer = document.createElement("div");
@@ -133,8 +132,21 @@ nums.forEach(num => {
     if (symbol == undefined) {
       a += e.target.value;
       document.querySelector(".display-num-container").innerHTML = parseInt(a);
+    } else {
+      b += e.target.value;
+      document.querySelector(".display-num-container").innerHTML = parseInt(b);
     }
   });
 });
 
-console.log(typeof a);
+let operators = document.querySelectorAll(".operator-button");
+operators.forEach(operator => {
+  operator.addEventListener("click", (e) => {
+    if(a != 0 && symbol == undefined) {
+      symbol = e.target.value;
+    }
+  });
+});
+
+
+
